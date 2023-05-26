@@ -28,9 +28,18 @@ public class ArrayListCustomTest {
      */
     @Test
     public void methodGetAfterAdd(){
-    	listOfStrings.set(2, "dog");
+    	listOfStrings.add(1, "dog");
+        assertEquals("bear", listOfStrings.get(2));
+        assertEquals(4, listOfStrings.size());
+    }
+    /**
+     * Проверяем, что метод add после добавления возвращает ожидаемое значение
+     */
+    @Test
+    public void methodAddAfterAdd(){
+    	listOfStrings.add(2, "dog");
         assertEquals("dog", listOfStrings.get(2));
-        assertEquals(3, listOfStrings.size());
+        assertEquals(4, listOfStrings.size());
     }
     /**
      * Проверяем, что метод get после удаления возвращает ожидаемое значение

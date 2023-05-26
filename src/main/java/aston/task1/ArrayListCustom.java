@@ -107,6 +107,25 @@ public class ArrayListCustom<T> {
 			items[index] = item;
 		}
 	}
+	/**
+	 * Добавление элемента по заданному индексу
+	 * 
+	 * @param item  устанавливаемый элемент
+	 * @param index индекс элемента который будет установлен
+	 * @throws IndexOutOfBoundsException если элемента с таким index не существует.
+	 */
+
+	 public void add(int index, T item) {
+	        if (index < 0 || index > size) {
+	            throw new IndexOutOfBoundsException(index + "Неверно задан индекс");
+	        }
+	        if (size == items.length) {
+	            growth();
+	        }
+	        System.arraycopy(items, index, items, index + 1, size - index);
+	        items[index] = item;
+	        size++;
+	    }
 
 	/**
 	 * Получение элемента по индексу

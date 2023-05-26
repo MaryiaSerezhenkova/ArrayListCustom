@@ -10,7 +10,10 @@ public class ArrayListCustomDemo {
 		System.out.println(Arrays.toString(obj.getItems()));
 	    QuickSort2.sort(obj);
 		System.out.println(Arrays.toString(obj.getItems()));
+		obj.add(3, 1212);
 		
+		System.out.println(Arrays.toString(obj.getItems()));
+
 		
 
 	}
